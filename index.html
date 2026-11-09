@@ -1,0 +1,750 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Mohamed Ilyas Mydeen - Data Analyst Portfolio. Excel, Power BI, SQL, Python and Data Analytics Projects.">
+
+    <meta name="author" content="Mohamed Ilyas Mydeen">
+
+    <title>Mohamed Ilyas Mydeen | Data Analyst Portfolio</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #F7F8F3;
+            color: #183B2D;
+            line-height: 1.7;
+        }
+
+        /* NAVIGATION */
+
+        header {
+            background: #0B4A33;
+            color: white;
+            padding: 20px 8%;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        nav h2 {
+            color: #7BE0A8;
+            font-size: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #7BE0A8;
+        }
+
+        /* HERO */
+
+        .hero {
+            background: #0B4A33;
+            color: white;
+            padding: 110px 8%;
+            min-height: 480px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(35px, 6vw, 58px);
+            margin-bottom: 15px;
+        }
+
+        .hero span {
+            color: #7BE0A8;
+        }
+
+        .hero h2 {
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            color: #E2F2E8;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            width: fit-content;
+            padding: 12px 25px;
+            background: #7BE0A8;
+            color: #0B4A33;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: white;
+            transform: translateY(-3px);
+        }
+
+        /* COMMON SECTIONS */
+
+        section {
+            padding: 75px 8%;
+        }
+
+        .section-title {
+            font-size: 32px;
+            margin-bottom: 15px;
+            color: #0B4A33;
+        }
+
+        .section-subtitle {
+            color: #63766A;
+            margin-bottom: 30px;
+        }
+
+        /* ABOUT */
+
+        .about-content {
+            max-width: 850px;
+            font-size: 17px;
+        }
+
+        .about-content h3 {
+            margin-bottom: 15px;
+        }
+
+        /* SKILLS */
+
+        .skills {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 5px solid #0B4A33;
+            box-shadow: 0 4px 15px #0000000d;
+            transition: 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .skill-card h3 {
+            color: #087B4A;
+            margin-bottom: 10px;
+        }
+
+        /* EXPERIENCE */
+
+        .experience-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            border-left: 5px solid #0B4A33;
+            box-shadow: 0 4px 15px #0000000d;
+        }
+
+        .experience-card h3 {
+            color: #087B4A;
+        }
+
+        /* PROJECTS */
+
+        #projects {
+            background: #EDF4EC;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        .project-card {
+            background: white;
+            padding: 28px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px #0000000d;
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            transform: translateY(-7px);
+        }
+
+        .project-card h3 {
+            color: #0B4A33;
+            margin-bottom: 12px;
+        }
+
+        .project-card p {
+            color: #596B60;
+            flex-grow: 1;
+        }
+
+        .tag {
+            display: inline-block;
+            margin-top: 15px;
+            margin-right: 5px;
+            background: #DFF5E7;
+            color: #087B4A;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+        }
+
+        .project-link {
+            display: inline-block;
+            margin-top: 22px;
+            padding: 10px 16px;
+            background: #0B4A33;
+            color: white;
+            border-radius: 6px;
+            text-decoration: none;
+            text-align: center;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .project-link:hover {
+            background: #087B4A;
+        }
+
+        /* CONTACT */
+
+        #contact {
+            background: #E8F3E9;
+        }
+
+        .contact-info {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            max-width: 650px;
+        }
+
+        .contact-info p {
+            margin: 15px 0;
+            overflow-wrap: anywhere;
+        }
+
+        .contact-info a {
+            color: #087B4A;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #0B4A33;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        footer span {
+            color: #7BE0A8;
+        }
+
+        /* MOBILE RESPONSIVE */
+
+        @media(max-width: 700px) {
+
+            header {
+                padding: 18px 5%;
+            }
+
+            nav {
+                flex-direction: column;
+            }
+
+            nav div {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 12px;
+            }
+
+            nav a {
+                margin: 0;
+                font-size: 12px;
+            }
+
+            .hero {
+                padding: 75px 6%;
+            }
+
+            section {
+                padding: 55px 6%;
+            }
+
+            .section-title {
+                font-size: 27px;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <header>
+
+        <nav>
+
+            <h2>ILYAS.</h2>
+
+            <div>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- HOME SECTION -->
+
+    <div class="hero" id="home">
+
+        <h1>
+            Hello, I'm
+            <span>Mohamed Ilyas Mydeen</span>
+        </h1>
+
+        <h2>Aspiring Data Analyst</h2>
+
+        <p>
+            I transform raw data into meaningful business
+            insights using Microsoft Excel, Power BI,
+            SQL and Python.
+
+            Passionate about Data Analytics, Business
+            Intelligence and data-driven decision making.
+        </p>
+
+        <a href="#projects" class="btn">
+            Explore My Projects →
+        </a>
+
+    </div>
+
+
+    <!-- ABOUT ME -->
+
+    <section id="about">
+
+        <h2 class="section-title">About Me</h2>
+
+        <div class="about-content">
+
+            <h3>Mohamed Ilyas Mydeen</h3>
+
+            <p>
+                I am an aspiring Data Analyst with a
+                Bachelor of Engineering in Electrical
+                and Electronics Engineering.
+
+                I have professional experience in
+                accounting and business management.
+
+                I have developed practical skills in
+                Microsoft Excel, Power BI, SQL and Python.
+
+                I enjoy working with datasets, performing
+                data cleaning, analyzing business
+                performance and creating interactive
+                dashboards.
+
+                My goal is to transform complex data
+                into meaningful insights that support
+                better business decisions.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- TECHNICAL SKILLS -->
+
+    <section id="skills">
+
+        <h2 class="section-title">Technical Skills</h2>
+
+        <p class="section-subtitle">
+            Tools and technologies used in my
+            Data Analytics journey.
+        </p>
+
+        <div class="skills">
+
+            <div class="skill-card">
+
+                <h3>Microsoft Excel</h3>
+
+                <p>
+                    Data Cleaning, Pivot Tables,
+                    VLOOKUP, XLOOKUP, Power Query
+                    and Data Analysis.
+                </p>
+
+            </div>
+
+            <div class="skill-card">
+
+                <h3>Power BI</h3>
+
+                <p>
+                    Interactive Dashboards,
+                    Data Modeling, DAX,
+                    Power Query and Visualization.
+                </p>
+
+            </div>
+
+            <div class="skill-card">
+
+                <h3>SQL</h3>
+
+                <p>
+                    Joins, CTEs, Subqueries,
+                    Aggregate Functions,
+                    GROUP BY and Window Functions.
+                </p>
+
+            </div>
+
+            <div class="skill-card">
+
+                <h3>Python</h3>
+
+                <p>
+                    Pandas, NumPy,
+                    Matplotlib, Seaborn
+                    and Data Analysis.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROFESSIONAL EXPERIENCE -->
+
+    <section id="experience">
+
+        <h2 class="section-title">
+            Professional Experience
+        </h2>
+
+        <div class="experience-card">
+
+            <h3>Company Manager</h3>
+
+            <p><strong>MAS Aqua Industries</strong></p>
+
+            <p>August 2022 – Present</p>
+
+            <p>
+                Managing business operations,
+                monitoring performance and
+                supporting operational decisions.
+            </p>
+
+        </div>
+
+        <div class="experience-card">
+
+            <h3>Accountant</h3>
+
+            <p>
+                <strong>
+                    Women's Integrated National
+                    Development Trust
+                </strong>
+            </p>
+
+            <p>June 2013 – July 2022</p>
+
+            <p>
+                Managed accounting operations,
+                financial records and reporting.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- FEATURED PROJECTS -->
+
+    <section id="projects">
+
+        <h2 class="section-title">
+            Featured Projects
+        </h2>
+
+        <p class="section-subtitle">
+            Explore my practical Data Analytics projects
+            and source code on GitHub.
+        </p>
+
+        <div class="projects">
+
+
+            <!-- PROJECT 1 -->
+
+            <div class="project-card">
+
+                <h3>
+                    Supply Chain Performance Analysis
+                </h3>
+
+                <p>
+                    Analyzed 19,999 records to understand
+                    supply chain performance, delivery
+                    trends, operational KPIs and
+                    delivery risks.
+
+                    Developed insights to support
+                    better operational decisions.
+                </p>
+
+                <div>
+                    <span class="tag">Excel</span>
+                    <span class="tag">Power BI</span>
+                    <span class="tag">Data Analysis</span>
+                </div>
+
+                <a
+                    href="https://github.com/mdilyasmydeen/Mini-Project"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link">
+
+                    View Source Code →
+
+                </a>
+
+            </div>
+
+
+            <!-- PROJECT 2 -->
+
+            <div class="project-card">
+
+                <h3>
+                    E-Commerce Sales Analytics
+                </h3>
+
+                <p>
+                    Analyzed 10,000 orders covering
+                    revenue, total orders, average
+                    order value and product category
+                    performance.
+
+                    Developed a Power BI dashboard
+                    to monitor business performance.
+                </p>
+
+                <div>
+                    <span class="tag">Power BI</span>
+                    <span class="tag">DAX</span>
+                    <span class="tag">Data Analytics</span>
+                </div>
+
+                <a
+                    href="https://github.com/mdilyasmydeen/Data_Analytics_Main_Project"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link">
+
+                    View Source Code →
+
+                </a>
+
+            </div>
+
+
+            <!-- PROJECT 3 -->
+
+            <div class="project-card">
+
+                <h3>
+                    Music Streaming Platform Analysis
+                </h3>
+
+                <p>
+                    Analyzed music streaming performance
+                    using Spotify streams, YouTube views
+                    and TikTok engagement metrics.
+
+                    Explored digital music trends
+                    and platform performance.
+                </p>
+
+                <div>
+                    <span class="tag">Python</span>
+                    <span class="tag">Data Analytics</span>
+                    <span class="tag">Visualization</span>
+                </div>
+
+                <a
+                    href="https://github.com/mdilyasmydeen/Music-Streaming-Platform-Analysis"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link">
+
+                    View Source Code →
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT SECTION -->
+
+    <section id="contact">
+
+        <h2 class="section-title">
+            Let's Connect
+        </h2>
+
+        <p class="section-subtitle">
+
+            Open to Data Analyst opportunities,
+            professional networking and collaborations.
+
+        </p>
+
+        <div class="contact-info">
+
+            <p>
+                <strong>Name:</strong>
+                Mohamed Ilyas Mydeen
+            </p>
+
+            <p>
+                <strong>Email:</strong>
+
+                <a href="mailto:mdilyasmydeen@gmail.com">
+                    mdilyasmydeen@gmail.com
+                </a>
+            </p>
+
+            <p>
+                <strong>Mobile:</strong>
+
+                <a href="tel:+919789376006">
+                    +91 9789376006
+                </a>
+            </p>
+
+            <p>
+                <strong>GitHub:</strong>
+
+                <a
+                    href="https://github.com/mdilyasmydeen/"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    Visit My GitHub Profile →
+
+                </a>
+            </p>
+
+            <p>
+                <strong>LinkedIn:</strong>
+
+                <a
+                    href="https://www.linkedin.com/in/mdilyasmydeen/"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    Connect on LinkedIn →
+
+                </a>
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026
+            <span>Mohamed Ilyas Mydeen</span>.
+            All Rights Reserved.
+        </p>
+
+        <p>Data Analyst Portfolio</p>
+
+    </footer>
+
+
+</body>
+
+</html>
